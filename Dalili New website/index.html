@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Appliance</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="./images/icon/logo.png" />
+    <link rel="stylesheet" href="./css/aos.css" />
+    <script src="./js/aos.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./js/jquery.min.js"
+      id="jquery-min-js"
+    ></script>
+    <script src="./js/core.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <style>
+      .icon-container {
+        display: inline-block;
+        position: relative;
+        width: 100px;
+        height: 100px;
+      }
+
+      .fa-cog {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        color: white;
+        animation: rotate 4s linear;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: translate(-50%, -50%) rotate(-60deg);
+        }
+        50% {
+          transform: translate(-50%, -50%) rotate(100deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(30deg);
+        }
+      }
+
+      @-webkit-keyframes rotate {
+        0% {
+          transform: translate(-50%, -50%) rotate(-60deg);
+        }
+        50% {
+          transform: translate(-50%, -50%) rotate(100deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(30deg);
+        }
+      }
+      @-moz-keyframes rotate {
+        0% {
+          transform: translate(-50%, -50%) rotate(-60deg);
+        }
+        50% {
+          transform: translate(-50%, -50%) rotate(100deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(30deg);
+        }
+      }
+      @-o-keyframes rotate {
+        0% {
+          transform: translate(-50%, -50%) rotate(-60deg);
+        }
+        50% {
+          transform: translate(-50%, -50%) rotate(100deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(30deg);
+        }
+      }
+
+      .element {
+        animation: rotate;
+        -webkit-animation: rotate;
+        -moz-animation: rotate;
+        -o-animation: rotate;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ######################################## hero section ##################################-->
+    <section class="hero">
+      <img src="" alt="" class="logo" />
+      <div class="hero-text">
+        <div class="icon-container element">
+          <img
+            src=""
+            class="fa fa-cog setting_logo"
+            alt=""
+            width="100%"
+            height="100%"
+          />
+        </div>
+        <div class="hero_title">
+          <h1 id="app"></h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- ######################################## Sidebar #######################################-->
+    <section>
+      <div id="sidebar">
+        <nav>
+          <ul>
+            <li><a href="#sidebar"> HOME</a></li>
+            <li><a href="./Schedule.html"> SCHEDULE NOW</a></li>
+            <li><a href="#feature"> FEATURES</a></li>
+            <li><a href="#service"> SERVICES</a></li>
+            <li><a href="#testimonial"> TESTIMONIALS</a></li>
+            <li><a href="#footer"> MEET US</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="menuBtn">
+        <img src="./images/menu.png" id="menu" />
+      </div>
+    </section>
+
+    <!-- ######################################## Feature #######################################-->
+    <section id="feature">
+      <div
+        class="title-text"
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-delay="800"
+      >
+        <p>FEATURES</p>
+        <h1>How we help you</h1>
+      </div>
+      <div class="feature-box">
+        <div
+          class="features"
+          data-aos="fade-right"
+          data-aos-duration="200"
+          data-aos-delay="600"
+        ></div>
+        <div
+          class="features-img"
+          data-aos="fade-left"
+          data-aos-duration="1200"
+          data-aos-delay="800"
+        >
+          <img src="" />
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- ######################################## Appliance Service ###################################-->
+    <section id="service">
+      <div
+        class="title-text"
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-delay="800"
+      >
+        <p>Services</p>
+        <h1>Appliance We Repair & Service</h1>
+      </div>
+      <div
+        class="AppService-row"
+        data-aos="zoom-in"
+        data-aos-duration="900"
+        data-aos-delay="800"
+      >
+        <!-- <div class="AppService-col">
+          <img src="./images/appliances/dolly.png" />
+          <p>Install & Haul</p>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- ######################################## Gallery ########################################-->
+    <section id="AppService">
+      <div
+        class="title-text"
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-delay="800"
+      >
+        <p>GALLERY</p>
+        <h1>We Provide Better</h1>
+      </div>
+      <div class="service-box"></div>
+    </section>
+
+    <!-- ######################################## Testimonial ###################################-->
+    <section id="testimonial">
+      <div
+        class="title-text"
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-delay="800"
+      >
+        <p>TESTIMONIAL</p>
+        <h1>What Our Custormers Say</h1>
+      </div>
+      <div class="testimonial-row"></div>
+    </section>
+    <!-- ######################################## Google Map ###################################-->
+    <section id="Googlemap">
+      <div
+        class="title-text"
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-delay="800"
+      >
+        <h1 class="googlemapHeading">GOOGLE MAP</h1>
+      </div>
+      <div class="Googlemap-row">
+        <div class="Googlemap-col">
+          <div class="user">
+            <iframe
+              src=""
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ######################################## Footer #######################################-->
+    <section id="footer">
+      <div
+        class="title-text"
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-delay="800"
+      >
+        <p>CONTACT</p>
+        <h1>Visit Shop Today</h1>
+      </div>
+      <div class="footer-row">
+        <div class="footer-left">
+          <h1>Opening Hours</h1>
+          <p><i class="fa fa-clock-o"></i> Monday to Friday - 9am to 9pm</p>
+          <p><i class="fa fa-clock-o"></i> Saturday to Sunday - 8am to 11pm</p>
+        </div>
+        <div class="footer-right">
+          <h1>Get In Touch</h1>
+          <p class="address"></p>
+          <p class="email"></p>
+          <p class="phone"></p>
+        </div>
+      </div>
+      <div class="social-links"></div>
+    </section>
+    <!-- ######## Javascript ########-->
+    <script>
+      var typewriterName = "";
+      var basUrl="http://city-appliance.com:4200";
+      //############### getting logo
+      function Logo() {
+        // Make AJAX request to retrieve logo image URL
+        $.ajax({
+          url: basUrl+ "/logo",
+          type: "GET",
+          success: function (data) {
+            // Update the image src attribute with the URL returned by the API
+            $(".logo").attr("src", basUrl+"/" + data[0].image);
+          },
+          error: function () {
+            console.log("Error retrieving logo image URL from API");
+          },
+        });
+      }
+
+      function FeatureImage() {
+        $.ajax({
+          url: basUrl+"/featureImage",
+          type: "GET",
+          success: function (data) {
+            $(".features-img img").attr(
+              "src",
+              basUrl+"/" + data[0].image
+            );
+          },
+          error: function () {
+            console.log("Error retrieving feature image URL from API");
+          },
+        });
+      }
+
+      function GoogleMap() {
+        // Make AJAX request to retrieve Google Maps URL
+        $.ajax({
+          url: basUrl+"/googleMap",
+          type: "GET",
+          success: function (data) {
+            // Select the Google Maps iframe
+            var googleMaps = $(".user iframe");
+
+            // Update the iframe src attribute with the URL returned by the API
+            googleMaps.attr("src", data[0].contents);
+          },
+          error: function () {
+            console.log("Error retrieving Google Maps URL from API");
+          },
+        });
+      }
+
+      //############### Services ############
+      function Services() {
+        $.ajax({
+          url: basUrl+"/services",
+          type: "GET",
+          success: function (data) {
+            for (var i = 0; i < data.length; i++) {
+              var item = data[i];
+              var imgUrl = item.image;
+              var title = item.serviceName;
+
+              // Create a new <div> element with the image and title
+              var $div = $("<div>", { class: "AppService-col" });
+              var $img = $("<img>", { src: basUrl + imgUrl });
+              var $p = $("<p>", { text: title });
+
+              // Append the image and title to the <div> element
+              $div.append($img);
+              $div.append($p);
+
+              // Append the <div> element to the parent container
+              $(".AppService-row").append($div);
+            }
+          },
+          error: function () {
+            console.log("Error retrieving logo image URL from API");
+          },
+        });
+      }
+
+      //############### Testimonial ###############
+      function Testimonial() {
+        $.ajax({
+          url: basUrl+"/review",
+          type: "GET",
+          success: function (data) {
+            const testimonial = $(".testimonial-row");
+            for (var i = 0; i < data.length; i++) {
+              const userName = data[i].userName;
+              const image = data[i].image;
+              const description = data[i].description;
+
+              testimonial.append(`
+          <div class="testimonial-col">
+            <div class="user">
+              <img src="${basUrl+image}" alt="" />
+              <div class="user-info">
+                <h4>${userName}</h4>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <p>${description}</p>
+          </div>
+        `);
+            }
+          },
+          error: function () {
+            console.log("Error retrieving reviews from API");
+          },
+        });
+      }
+
+      //############### About Us ###############
+      function AboutUs() {
+        $.ajax({
+          url: basUrl+"/ourContact",
+          type: "GET",
+          success: function (data) {
+            var footerRight = $(".footer-right");
+            $(".address").html(
+              data[0].address + ' <i class="fa fa-map-marker"></i>'
+            );
+            $(".email").html(
+              data[0].email + ' <i class="fa fa-paper-plane"></i>'
+            );
+            $(".phone").html(data[0].phone + ' <i class="fa fa-phone"></i>');
+          },
+          error: function () {
+            console.log("Error retrieving data from API");
+          },
+        });
+      }
+
+      //############### About Us ###############
+      function SocialLinks() {
+        $.ajax({
+          url: basUrl+"/socialIcon",
+          type: "GET",
+          success: function (data) {
+            // Select the social-links div
+            var socialLinks = $(".social-links");
+
+            // Loop through the social links data
+            // Create an <a> element with the link URL
+              var linkElement = $("<a>").attr({
+                href: link,
+                target: "_blank",
+              });
+            for (var i = 0; i < data.length; i++) {
+              var item = data[i];
+              var imgUrl = item.icon;
+              var link = item.link;
+
+              // Determine the social icon class based on the link URL
+              var socialClass = "";
+              if (link.includes("facebook")) {
+                socialClass = "fa fa-facebook";
+              } else if (link.includes("instagram")) {
+                socialClass = "fa fa-instagram";
+              } else if (link.includes("twitter")) {
+                socialClass = "fa fa-twitter";
+              } else if (link.includes("youtube")) {
+                socialClass = "fa fa-youtube-play";
+              } else if (link.includes("linkedin")) {
+                socialClass = "fa fa-linkedin";
+              }
+
+              
+
+              // Create an <i> element with the social icon class
+              var iconElement = $("<i>").attr("class", socialClass);
+
+              // Append the <i> element to the <a> element, and then append the <a> element to the social-links div
+              linkElement.append(iconElement);
+              socialLinks.append(
+                linkElement               
+              );
+            }
+
+            linkElement.append('<a target="_blank" href="https://algos-consulting.com/"><p>Copyright with Algosoft</p></a>');
+          },
+          error: function () {
+            console.log("Error retrieving data from API");
+          },
+        });
+      }
+
+      //############### Gallery ############
+      function Gallery() {
+        $.ajax({
+          url: basUrl+"/shortAboutUs",
+          type: "GET",
+          success: function (data) {
+            // Select the service-box div
+            var serviceBox = $(".service-box");
+
+            // Loop through the gallery data
+            for (var i = 0; i < data.length; i++) {
+              var item = data[i];
+              var imgUrl = item.image;
+              var title = item.title;
+              var desc = item.description;
+
+              // Create the HTML elements for the single-service div
+              var $div = $("<div>", { class: "single-service" });
+              var $img = $("<img>", { src: basUrl + imgUrl });
+              var $overlay = $("<div>", { class: "overlay" });
+              var $desc = $("<div>", { class: "service-desc" });
+              var $h3 = $("<h3>").text(title);
+              var $hr = $("<hr>");
+              var $p = $("<p>").text(desc);
+
+              // Append the HTML elements to the single-service div
+              $desc.append($h3, $hr, $p);
+              $div.append($img, $overlay, $desc);
+
+              // Append the completed single-service div to the service-box div
+              serviceBox.append($div);
+            }
+          },
+          error: function () {
+            console.log("Error retrieving gallery data from API");
+          },
+        });
+      }
+
+      // ########### hero ##################
+      function Hero() {
+        // Make AJAX request to retrieve logo image URL
+        $.ajax({
+          url: basUrl+"/hero",
+          type: "GET",
+          success: function (data) {
+            var hero_text = $(".hero-text");
+            var hero_logo = $(".hero-text");
+            var iconContainer = hero_logo.find("icon-container element");
+            var main_title = $(".hero_title");
+            var p = "<p data-aos='fade-up'> </p>";
+            var title = $(p).text(data[0].sub_title);
+            typewriterName = data[0].main_title;
+            iconContainer.append(
+              $(".setting_logo").attr(
+                "src",
+                basUrl + data[0].image
+              )
+            );
+            var btn = `<div class='hero-btn'><a href='https://g.page/r/Cc4kLoXCkLRXEB0/review' target='_blank' data-aos='fade-up' data-aos-delay='800'><span></span>WRITE REVIEW</a><a href='#' data-aos='fade-up' data-aos-delay='1000'><span></span> ${data[0].phone_no} </a><a href='Schedule.html' data-aos='fade-up' data-aos-delay='800'><span></span>SCHEDULE NOW</a><a href='https://www.google.com/maps/place/City+Appliance+Repair+Service/@38.5617339,-121.4429125,11z/data=!3m1!4b1!4m6!3m5!1s0x809acf0c9519ea8d:0x57b490c2852e24ce!8m2!3d38.561734!4d-121.4429125!16s%2Fg%2F11s14qjbp4?entry=ttu' target='_blank' data-aos='fade-up' data-aos-delay='800'><span></span>READ REVIEW</a></div>`;
+            main_title.append(title, btn);
+
+            //  typewritter
+            var app = document.getElementById("app");
+            var typewriter = new Typewriter(app, {
+              loop: true,
+            });
+
+            typewriter
+              .typeString(typewriterName)
+              .pauseFor(2500)
+              .deleteAll()
+              .start();
+            var scroll = new SmoothScroll('a[href*="#"]', {
+              speed: 1000,
+              speedAsDuration: true,
+            });
+          },
+          error: function () {
+            console.log("Error retrieving logo image URL from API");
+          },
+        });
+      }
+
+      // ########### Main function #############
+      $(document).ready(() => {
+        Logo();
+        Hero();
+        Testimonial();
+        AboutUs();
+        Gallery();
+        Services();
+        SocialLinks();
+        GoogleMap();
+        FeatureImage();
+        $.ajax({
+          url: basUrl+"/howWeHelp",
+          type: "GET",
+          dataType: "json",
+          success: function (data) {
+            var featureBox = $(".feature-box");
+            var features = featureBox.find(".features");
+            // Loop through the API data and create the left-side content
+            $.each(data, function (index, item) {
+              var featuresDesc = $("<div>").addClass("features-desc");
+              var featureIcon = $("<div>").addClass("feature-icon");
+              var myIcon = $("<div>").addClass("myIcon");
+              var i=$("<i>").addClass(`fa ${item.icon}`)
+              var featureText = $("<div>").addClass("feature-text");
+              var title = $("<h1>").text(item.title);
+              var desc = $("<p>").text(item.description);
+              myIcon.append(i);
+              featureIcon.append(myIcon);
+              featureText.append(desc);
+              featuresDesc.append(featureIcon, featureText);
+              features.append(title, featuresDesc);
+            });
+          },
+          error: function (error) {
+            console.log("Error:", error);
+          },
+        });
+      });
+      var menuBtn = document.getElementById("menuBtn");
+      var sidebar = document.getElementById("sidebar");
+      var menu = document.getElementById("menu");
+
+      sidebar.style.right = "-220px";
+
+      menuBtn.onclick = function () {
+        if (sidebar.style.right == "-220px") {
+          sidebar.style.right = "0";
+          menu.src = "./images/close.png";
+        } else {
+          sidebar.style.right = "-220px";
+          menu.src = "./images/menu.png";
+        }
+      };
+
+      AOS.init();
+    </script>
+  </body>
+</html>

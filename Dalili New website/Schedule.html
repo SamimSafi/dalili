@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Appliance</title>
+    <link rel="icon" type="image/x-icon" href="./images/icon/logo.png" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/scheduleStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Zebra_Datepicker plugin -->
+<!-- for the most recent version of the "bootstrap" theme -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/zebra_datepicker@latest/dist/css/bootstrap/zebra_datepicker.min.css">
+
+<!-- replacing "min" with "src" will serve you the non-compressed version -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <script
+  type="text/javascript"
+  src="./js/jquery.min.js"
+  id="jquery-min-js"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/toastr.min.js"></script>
+    <!-- ######## Javascript ########-->
+    <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=explicit"></script> -->
+
+    <!-- <script>
+      var widgetId;
+  
+      grecaptcha.enterprise.ready(function() {
+        widgetId = grecaptcha.enterprise.render('recaptcha-container', {
+          'sitekey': '6LdEHXcmAAAAAM5dF0McnoFgM8e2OcVDjVSCl7m5',
+          'size': 'invisible',
+          'action': 'submit'
+        });
+      });
+    </script> -->
+<!-- Include the reCAPTCHA script -->
+<!-- <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="./js/core.min.js"></script> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <!-- for a specific version -->
+<script
+src="https://cdn.jsdelivr.net/npm/zebra_datepicker@1.9.13/dist/zebra_datepicker.min.js"></script>
+
+<!-- replacing "min" with "src" will serve you the non-compressed version -->
+  <body>
+    <!-- ######################################## hero section ##################################-->
+    <section class="heroSec">
+      <img src="./images/white-logo.png" alt="" class="logo" />
+      <div class="hero-textSec">
+        <h1>City Appliance Repair Service</h1>
+        <p data-aos="fade-up">Your Friend when Times are Hard</p>
+      </div>
+    </section>
+
+    <!-- ######################################## Sidebar #######################################-->
+    <section>
+      <div id="sidebar">
+        <nav>
+          <ul>
+            <li><a href="index.html"> HOME</a></li>
+            <li><a href="index.html"> FEATURES</a></li>
+            <li><a href="index.html"> SERVICES</a></li>
+            <li><a href="index.html"> TESTIMONIALS</a></li>
+            <li><a href="index.html"> MEET US</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="menuBtn">
+        <img src="./images/menu.png" id="menu" />
+      </div>
+    </section>
+
+    <!-- ######################################## Scheduel Now ###################################-->
+
+    <div id="reserve" class="container-fluid">
+      <div class="container">
+        <form
+          id="regForm"
+          method="POST"
+          onsubmit="submitForm(event)"
+        >
+          <div class="tab" style="display: block">
+            <section id="Heading">
+              <div
+              class="title-text"
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aos-delay="800"
+            >
+              <p>Please choose Your Product!</p>
+            </div>
+            </section>
+            
+            <!-- .main_title -->
+            <div class="row_appliance">
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="product"
+                  id="Dishwasher"
+                  value="Dishwasher"
+                  class="input_product"
+                />
+                <label for="Dishwasher" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/appliances/Washer's.png"
+                        alt="Dishwasher"
+                      />
+                    </div>
+                    <div class="title_appliance">Dishwasher</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="product"
+                  id="dryer"
+                  value="Dryer"
+                  class="input_product"
+                />
+                <label for="dryer" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/appliances/dryer.png"
+                        alt="Dryer"
+                      />
+                    </div>
+                    <div class="title_appliance">Dryer</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="product"
+                  id="freezer"
+                  value="Freezer"
+                  class="input_product"
+                />
+                <label for="freezer" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/appliances/range.png"
+                        alt="range"
+                      />
+                    </div>
+                    <div class="title_appliance">Range</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="product"
+                  id="microwave"
+                  value="Microwave"
+                  class="input_product"
+                />
+                <label for="microwave" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/appliances/microwave.png"
+                        alt="Microwave"
+                      />
+                    </div>
+                    <div class="title_appliance">Microwave</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="product"
+                  id="range"
+                  value="Range"
+                  class="input_product"
+                />
+                <label for="range" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/appliances/dw.png"
+                        alt="Range"
+                      />
+                    </div>
+                    <div class="title_appliance"><a href="#">Dishwashers</a></div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="product"
+                  id="walloven"
+                  value="Wall Oven"
+                  class="input_product"
+                />
+                <label for="walloven" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/appliances/Washer's.png"
+                        alt="Walloven"
+                      />
+                    </div>
+                    <div class="title_appliance">Washers</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="product"
+                  id="refrigerator"
+                  value="Refrigerator"
+                  class="input_product"
+                />
+                <label for="refrigerator" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/appliances/dryer.png"
+                        alt="Refrigerator"
+                      />
+                    </div>
+                    <div class="title_appliance">Dryers</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="product"
+                  id="Trash_Compactor"
+                  value="Trash Compactor"
+                  class="input_product"
+                />
+                <label for="Trash_Compactor" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/appliances/dolly.png"
+                        alt="Trash Compactor"
+                      />
+                    </div>
+                    <div class="title_appliance">Install & Haul</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="product"
+                  id="cooktop"
+                  value="Cooktop"
+                  class="input_product"
+                />
+                <label for="cooktop" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/appliances/club.png"
+                        alt="Cooktop"
+                      />
+                    </div>
+                    <div class="title_appliance">Other</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="product"
+                  id="washer"
+                  value="Washer"
+                  class="input_product"
+                />
+                <label for="washer" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/appliances/trailers.png"
+                        alt="Washer"
+                      />
+                    </div>
+                    <div class="title_appliance">Trailer Rentals</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="product"
+                  id="range_hood"
+                  value="Range Hood"
+                  class="input_product"
+                />
+                <label for="range_hood" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/appliances/ice Maker.png"
+                        alt="Range Hood"
+                      />
+                    </div>
+                    <div class="title_appliance">Ice Maker</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="product"
+                  id="garbage_disposal"
+                  value="Garbage Disposal"
+                  class="input_product"
+                />
+                <label for="garbage_disposal" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/appliances/range.png"
+                        alt="Garbage Disposal"
+                      />
+                    </div>
+                    <div class="title_appliance">Range</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="clearfix"></div>
+            </div>
+            <!-- .row_appliance -->
+          </div>
+          <!-- .tab | Product -->
+          <div class="tab" style="display: none">
+           <section id="Heading">
+              <div
+              class="title-text"
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aos-delay="800"
+            >
+              <p>Now choose your brand</p>
+            </div>
+            </section>
+            <!-- .main_title -->
+            <div class="row_appliance">
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="clientId"
+                  id="Whirlpool"
+                  value="Whirlpool"
+                  class="input_product"
+                />
+                <label for="Whirlpool" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/brands/whirlpool.png"
+                        alt="Whirlpool"
+                      />
+                    </div>
+                    <div class="title_appliance">Whirlpool</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="clientId"
+                  id="Kenmore"
+                  value="Kenmore"
+                  class="input_product"
+                />
+                <label for="Kenmore" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/brands/kenmore.png"
+                        alt="Kenmore"
+                      />
+                    </div>
+                    <div class="title_appliance">Kenmore</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="clientId"
+                  id="GE"
+                  value="GE"
+                  class="input_product"
+                />
+                <label for="GE" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/brands/Ge.png"
+                        alt="GE"
+                      />
+                    </div>
+                    <div class="title_appliance">GE</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="clientId"
+                  id="Samsung"
+                  value="Samsung"
+                  class="input_product"
+                />
+                <label for="Samsung" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/brands/samsung.png"
+                        alt="Samsung"
+                      />
+                    </div>
+                    <div class="title_appliance">Samsung</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="clientId"
+                  id="LG"
+                  value="LG"
+                  class="input_product"
+                />
+                <label for="LG" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/brands/Lg.png"
+                        alt="LG"
+                      />
+                    </div>
+                    <div class="title_appliance">LG</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="clientId"
+                  id="Maytag"
+                  value="Maytag"
+                  class="input_product"
+                />
+                <label for="Maytag" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/brands/maytag.png"
+                        alt="Maytag"
+                      />
+                    </div>
+                    <div class="title_appliance">Maytag</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="clientId"
+                  id="Kitchenaid"
+                  value="Kitchenaid"
+                  class="input_product"
+                />
+                <label for="Kitchenaid" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/brands/kitchenaid.png"
+                        alt="Kitchenaid"
+                      />
+                    </div>
+                    <div class="title_appliance">Kitchenaid</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="clientId"
+                  id="Bosch"
+                  value="Bosch"
+                  class="input_product"
+                />
+                <label for="Bosch" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/brands/bosch.png"
+                        alt="Bosch"
+                      />
+                    </div>
+                    <div class="title_appliance">Bosch</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="clientId"
+                  id="Jenn-Air"
+                  value="Jenn-Air"
+                  class="input_product"
+                />
+                <label for="Jenn-Air" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/brands/jenn-air.png"
+                        alt="Jenn-Air"
+                      />
+                    </div>
+                    <div class="title_appliance">Jenn-Air</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="clientId"
+                  id="Hotpoint"
+                  value="Hotpoint"
+                  class="input_product"
+                />
+                <label for="Hotpoint" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/brands/hotpoint.png"
+                        alt="Hotpoint"
+                      />
+                    </div>
+                    <div class="title_appliance">Hotpoint</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="clientId"
+                  id="Frigidaire"
+                  value="Frigidaire"
+                  class="input_product"
+                />
+                <label for="Frigidaire" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/brands/frigidaire.png"
+                        alt="Hotpoint"
+                      />
+                    </div>
+                    <div class="title_appliance">Frigidaire</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="col_appliance">
+                <input
+                  type="radio"
+                  name="clientId"
+                  id="Electrolux"
+                  value="Electrolux"
+                  class="input_product"
+                />
+                <label for="Electrolux" class="label_product">
+                  <div class="box_appliance">
+                    <div class="icon_appliance">
+                      <img
+                        src="./images/brands/Electrolux.png"
+                        alt="Electrolux"
+                      />
+                    </div>
+                    <div class="title_appliance">Electrolux</div>
+                  </div>
+                  <!-- .box_appliance -->
+                </label>
+              </div>
+              <!-- .col_appliance -->
+              <div class="clearfix"></div>
+            </div>
+            <!-- .row_appliance -->
+          </div>
+          <!-- .tab | Brand -->
+          <div class="tab" style="display: none">
+            <div class="main_title">
+              
+              <div class="top_title" style="color:#0e77d2cd; font-weight: bold;font-size: 16px;">
+                Enter the model number &amp; serial number.
+              </div>
+            </div>
+            <!-- .main_title -->
+            <div class="col_info_reserve model_number">
+              <input
+                type="text"
+                name="ModelNumber"
+                placeholder="Model Number"
+              />
+              <div class="bottom_input_help">
+                please note that it is critical for us to have the model number
+                of your appliance at the time of service so we can find parts
+                and technical information. Our technicians know where to look
+                for it but if the it is missing, not readable or removed we
+                won’t be able to service your appliance. We will advise you
+                accordingly and you are responsible for the service fee.
+              </div>
+            </div>
+            <!-- .col_info_reserve -->
+            <div class="col_info_reserve model_number" style="margin-top: 10px">
+              <input
+                type="text"
+                name="SerialNumber"
+                placeholder="Serial Number"
+              />
+              <div class="bottom_input_help">
+                If you do not have the serial number, you can click on
+                'Continue' button.
+              </div>
+            </div>
+            <!-- .col_info_reserve -->
+          </div>
+          <div class="tab" style="display: none">
+            <div class="main_title">
+              
+              <div class="top_title">So, what seems to be the problem?</div>
+             <div style="color:#0e77d2cd; font-weight: bold;font-size: 36px;">Please choose the issue you're dealing with!</div> 
+            </div>
+            <!-- .main_title -->
+            <div class="reserve_issue">
+              <div class="top_title">Nature of Problem</div>
+              <div class="product_dishwasher" style="display: none">
+                <select name="product_dishwasher" id="problem_dishwasher">
+                  <option selected value=""></option>
+                  <option>Installation</option>
+                  <option>Won’t Drain</option>
+                  <option>Won’t start</option>
+                  <option>Error Code</option>
+                  <option>Won’t fill/over fill</option>
+                  <option>Not using detergent</option>
+                  <option>Not cleaning</option>
+                  <option>Leaking water</option>
+                  <option>No power</option>
+                  <option>Touchpad issues</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div id="Other_dishwasher" class="Other_field"></div>
+              </div>
+              <!-- .product_dishwaser -->
+              <div class="product_dryer" style="display: none">
+                <select name="product_dryer" id="problem_dryer">
+                  <option selected value=""></option>
+                  <option>Installation</option>
+                  <option>No heat</option>
+                  <option>Not running</option>
+                  <option>Too much noise</option>
+                  <option>Take long time to dry cloths</option>
+                  <option>Error codes</option>
+                  <option>Too hot</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div id="Other_dryer" class="Other_field"></div>
+              </div>
+              <!-- .product_dryer -->
+              <div class="product_freezer" style="display: none">
+                <select name="product_freezer" id="problem_freezer">
+                  <option selected value=""></option>
+                  <option>No cooling</option>
+                  <option>Poor cooling</option>
+                  <option>Leaking water</option>
+                  <option>Noise issue</option>
+                  <option>Door/Handle Issue</option>
+                  <option>No power</option>
+                  <option>Frost on the food</option>
+                  <option>Run all the time</option>
+                  <option>door seal issue</option>
+                  <option>not making ice</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div id="Other_freezer" class="Other_field"></div>
+              </div>
+              <!-- .product_freezer -->
+              <div class="product_microwave" style="display: none">
+                <select name="product_microwave" id="problem_microwave">
+                  <option selected value=""></option>
+                  <option>Installation</option>
+                  <option>Tripping Breaker</option>
+                  <option>No power</option>
+                  <option>Keypad Issue</option>
+                  <option>Loud noise</option>
+                  <option>Smoke/burning smell</option>
+                  <option>Spark/Arc</option>
+                  <option>Turntable not spinning</option>
+                  <option>Starts on its own</option>
+                  <option>Fan start when door opens/stops when closes</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div id="Other_microwave" class="Other_field"></div>
+              </div>
+              <!-- .product_microwave -->
+              <div class="product_range" style="display: none">
+                <select name="product_range" id="problem_range">
+                  <option selected value=""></option>
+                  <option>No igniting</option>
+                  <option>Keep igniting</option>
+                  <option>No power</option>
+                  <option>Gas smell</option>
+                  <option>Error code</option>
+                  <option>Noise issue</option>
+                  <option>No heating</option>
+                  <option>Door Issues</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div id="Other_range" class="Other_field"></div>
+              </div>
+              <!-- .product_range -->
+              <div class="product_walloven" style="display: none">
+                <select name="product_walloven" id="problem_walloven">
+                  <option selected value=""></option>
+                  <option>No heating</option>
+                  <option>Poor heating</option>
+                  <option>Not power</option>
+                  <option>Smell gas/burning</option>
+                  <option>Error code</option>
+                  <option>Won’t ignite</option>
+                  <option>Door/handle issues</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div id="Other_walloven" class="Other_field"></div>
+              </div>
+              <!-- .product_walloven -->
+              <div class="product_refrigerator" style="display: none">
+                <select name="product_refrigerator" id="problem_refrigerator">
+                  <option selected value=""></option>
+                  <option>No cooling</option>
+                  <option>Poor cooling</option>
+                  <option>Too cold</option>
+                  <option>No ice</option>
+                  <option>No water</option>
+                  <option>Leaking water</option>
+                  <option>Noise issue</option>
+                  <option>Not dispensing ice/water</option>
+                  <option>No power</option>
+                  <option>Door/handle issue</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div id="Other_refrigerator" class="Other_field"></div>
+              </div>
+              <!-- .product_refrigerator -->
+              <div class="product_Trash_Compactor" style="display: none">
+                <select
+                  name="problem_Trash_Compactor"
+                  id="problem_Trash_Compactor"
+                >
+                <option selected value=""></option>
+                  <option>Noise Issue</option>
+                  <option>Not Starting</option>
+                  <option>Not stopping</option>
+                  <option>Not Staying on</option>
+                  <option>Drawer not opening</option>
+                  <option>Ram gets stuck</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div id="Other_Trash_Compactor" class="Other_field"></div>
+              </div>
+              <!-- .product_Trash_Compactor -->
+              <div class="product_cooktop" style="display: none">
+                <select name="Other_Trash_Compactor" id="problem_cooktop">
+                  <option selected value=""></option>
+                  <option>Installation</option>
+                  <option>No igniting</option>
+                  <option>Keep igniting</option>
+                  <option>No power</option>
+                  <option>Gas smell</option>
+                  <option>Error code</option>
+                  <option>Noise issue</option>
+                  <option>Door Issues</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div id="Other_cooktop" class="Other_field"></div>
+              </div>
+              <!-- .product_cooktop -->
+              <div class="product_washer" style="display: none">
+                <select name="problem_washer" id="problem_washer">
+                  <option selected value=""></option>
+                  <option>Installation</option>
+                  <option>No spinning</option>
+                  <option>Not Draining</option>
+                  <option>Stops in med cycle</option>
+                  <option>Door not latching</option>
+                  <option>Leaking water</option>
+                  <option>Error code</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div id="Other_washer" class="Other_field"></div>
+              </div>
+              <!-- .product_washer -->
+              <div class="product_garbage_disposal" style="display: block">
+                <select
+                  name="problem_garbage_disposal"
+                  id="problem_garbage_disposal"
+                >
+                  <option selected value=""></option>
+                  <option>Installation</option>
+                  <option>Jammed</option>
+                  <option>No power</option>
+                  <option>Leaking water</option>
+                  <option>Blades not moving</option>
+                  <option>Won’t stop</option>
+                  <option>Clogged drain</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div id="Other_garbage_disposal" class="Other_field"></div>
+              </div>
+              <!-- .product_washer -->
+              <div class="product_range_hood" style="display: none">
+                <select name="problem_range_hood" id="problem_range_hood">
+                  <option selected value=""></option>
+                  <option>Installation</option>
+                  <option>No power</option>
+                  <option>No light when switch is ON</option>
+                  <option>Fan does Not come on</option>
+                  <option>Does NOT clear smoke</option>
+                  <option>Makes strange noise/humming</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div id="Other_range_hood" class="Other_field"></div>
+              </div>
+              <!-- .product_range_hood -->
+            </div>
+            <!-- .reserve_issue -->
+          </div>
+          <!-- .tab | Problem -->
+          <div class="tab" style="display: none">
+            <div class="main_title" style="color:#0e77d2cd; font-weight: bold;font-size: 36px;">
+              
+              Which option works best for you?
+            </div>
+            <div class="note_color">
+             
+              <div class="note_status">
+                <div class="note">Note:</div>
+                <div style="font-weight: bold; margin-left: 20px;">Gray Color Available </div>
+                <div class="available_gray"></div>
+                <div style="font-weight: bold; margin-left: 20px;">Read Color Un Available</div>
+                <div class="available_red"></div>
+              </div>
+            </div>
+           
+            <div class="row_weekday">
+              <div class="weekday"> Please Select Date & Time</div>
+              <div class="times_reserve">
+                <div class="time_reserve">
+                  <input type="text" name="times_reserve" id="times_reserve" />
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="tab" style="display: none">
+            <div class="main_title" style="color:#0e77d2cd; font-weight: bold;font-size: 36px;">
+              
+              Thanks, let's continue with your contact information now.
+            </div>
+            <!-- .main_title -->
+            <div class="information_reserve">
+              <div>
+                <div class="col_info_reserve col2_info_reserve">
+                  <input
+                    type="text"
+                    name="clientName"
+                    placeholder="Your Name"
+                    class="req"
+                    required=""
+                  />
+                </div>
+                <!-- .col_info_reserve -->
+                <div class="col_info_reserve col2_info_reserve">
+                  <input
+                    type="email"
+                    name="customer_email"
+                    placeholder="Email Address"
+                  />
+                </div>
+                <!-- .col_info_reserve -->
+                <div class="col_info_reserve col31_info_reserve">
+                  <input
+                    type="number"
+                    name="phoneNumber"
+                    placeholder="Phone Number"
+                    class="req"
+                    required=""
+                  />
+                </div>
+                <!-- .col_info_reserve -->
+                <div
+                  class="col_info_reserve col3_info_reserve"
+                  style="padding: 18px 7px"
+                >
+                  <span>Phone number type:</span>
+                  <input
+                    type="radio"
+                    name="numberType"
+                    id="work_phone_number"
+                    value="Work"
+                    class="time_reserve_input"
+                  />
+                  <label for="work_phone_number" class="time_reserve_label"
+                    >Work</label
+                  >
+                  <input
+                    type="radio"
+                    name="numberType"
+                    id="home_phone_number"
+                    value="Home"
+                    class="time_reserve_input"
+                  />
+                  <label for="home_phone_number" class="time_reserve_label"
+                    >Home</label
+                  >
+                  <input
+                    type="radio"
+                    name="numberType"
+                    id="mobile_phone_number"
+                    value="Mobile"
+                    class="time_reserve_input"
+                  />
+                  <label for="mobile_phone_number" class="time_reserve_label"
+                    >Mobile</label
+                  >
+                </div>
+                <!-- .col_info_reserve -->
+                <div
+                  class="col_info_reserve col25_info_reserve hidden show_with_js"
+                  style="padding: 18px 7px; display: none"
+                >
+                  May I send text messages?
+                  <input
+                    type="checkbox"
+                    name="allow_sms"
+                    id="allow_sms"
+                    value="allow"
+                    class="time_reserve_input"
+                  />
+                  <label for="allow_sms" class="time_reserve_label"
+                    >Allow</label
+                  >
+                </div>
+                <!-- .col_info_reserve -->
+                <div class="col_info_reserve col25_info_reserve">
+                  <input
+                    type="number"
+                    name="secondaryPhone"
+                    placeholder="Secondary Number"
+                  />
+                </div>
+                <!-- .col_info_reserve -->
+                <div class="clearfix"></div>
+              </div>
+              <div>
+                <div class="col_info_reserve col7_info_reserve">
+                  <input
+                    type="text"
+                    name="streetNumberName"
+                    placeholder="Street Number &amp; Name"
+                    class="req"
+                    required=""
+                  />
+                </div>
+                <!-- .col_info_reserve -->
+                <div class="col_info_reserve col3_info_reserve">
+                  <input
+                    type="text"
+                    name="unit_number"
+                    placeholder="Unit Number"
+                  />
+                </div>
+                <!-- .col_info_reserve -->
+                <div class="col_info_reserve col3_info_reserve">
+                  <!-- <input type="text" name="state" placeholder="State" required> -->
+                  <select name="state" class="req">
+                    <option value="CA" selected="">CA</option>
+                    <option value="AL" >AL</option>
+                    <option value="AK" >AK</option>
+                    <option value="AZ" >AZ</option>
+                    <option value="AR" >AR</option>
+                    <option value="CO" >CO</option>
+                    <option value="CT" >CT</option>
+                    <option value="DE" >DE</option>
+                    <option value="DC" >DC</option>
+                    <option value="FL" >FL</option>
+                    <option value="GA" >GA</option>
+                    <option value="HI" >HI</option>
+                    <option value="ID" >ID</option>
+                    <option value="IL" >IL</option>
+                    <option value="IN" >IN</option>
+                    <option value="IA" >IA</option>
+                    <option value="KS" >KS</option>
+                    <option value="KY" >KY</option>
+                    <option value="LA" >LA</option>
+                    <option value="ME" >ME</option>
+                    <option value="MD" >MD</option>
+                    <option value="MA" >MA</option>
+                    <option value="MI" >MI</option>
+                    <option value="MN" >MN</option>
+                    <option value="MS" >MS</option>
+                    <option value="MO" >MO</option>
+                    <option value="MT" >MT</option>
+                    <option value="NE" >NE</option>
+                    <option value="NV" >NV</option>
+                    <option value="NH" >NH</option>
+                    <option value="NJ" >NJ</option>
+                    <option value="NM" >NM</option>
+                    <option value="NY" >NY</option>
+                    <option value="NC" >NC</option>
+                    <option value="ND" >ND</option>
+                    <option value="OH" >OH</option>
+                    <option value="OK" >OK</option>
+                    <option value="OR" >OR</option>
+                    <option value="PA" >PA</option>
+                    <option value="RI" >RI</option>
+                    <option value="SC" >SC</option>
+                    <option value="SD" >SD</option>
+                    <option value="TN" >TN</option>
+                    <option value="TX" >TX</option>
+                    <option value="UT" >UT</option>
+                    <option value="VT" >VT</option>
+                    <option value="VA" >VA</option>
+                    <option value="WA" >WA</option>
+                    <option value="WV" >WV</option>
+                    <option value="WI" >WI</option>
+                    <option value="WY" >WY</option>
+                  </select>
+                </div>
+                <!-- .col_info_reserve -->
+                <div class="col_info_reserve col3_info_reserve">
+                  <input
+                    type="text"
+                    name="city"
+                    placeholder="City"
+                    class="req"
+                    required=""
+                  />
+                </div>
+                <!-- .col_info_reserve -->
+                <div class="col_info_reserve col3_info_reserve">
+                  <input
+                    type="text"
+                    name="zipcode"
+                    placeholder="Zip Code"
+                    class="req"
+                    required=""
+                  />
+                </div>
+
+              
+                <!-- .col_info_reserve -->
+                <div class="col_info_reserve col1_info_reserve">
+                  - We will never share your personal information or send
+                  communications without your approval.
+                  <br />
+                  - Your email address will be used only to send you information
+                  about your appointment.
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="fee price2" style="display: none">
+                <div class="fee_title">DIAGNOSTIC FEE: $000.00</div>
+                <div class="fee_excerpt">
+                  (The diagnostic fee will be applied to cost of repair if you
+                  accept our estimate.)
+                </div>
+              </div>
+              <div class="fee price1" style="display: block">
+                <div class="fee_title">DIAGNOSTIC FEE: $00.00</div>
+                <div class="fee_excerpt">
+                  (The diagnostic fee will be applied to cost of repair if you
+                  accept our estimate.)
+                </div>
+              </div>
+              <div class="clearfix"></div>
+                 <!-- Add the reCAPTCHA widget -->
+                 <!-- <div class="g-recaptcha" data-sitekey="6LdEHXcmAAAAAPT1JNVM_ZTlPV2GGNftkbDMxwzR" data-action="login"></div>
+                 <div id="recaptcha-container"></div> -->
+            </div>
+          </div>
+          <!-- .tab | Information -->
+          <div>
+            <div class="reserve_buttons">
+              <button
+                type="button"
+                id="prevBtn"
+                onclick="nextPrev(-1)"
+                style="display: none"
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                id="nextBtn"
+                onclick="nextPrev(1)"
+                class="continue_submit"
+              >
+                Continue
+              </button>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: 40px">
+            <span class="step active"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+          </div>
+        </form>
+        <script>
+          var currentTab = 0; // Current tab is set to be the first tab (0)
+          showTab(currentTab); // Display the current tab
+
+          function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+              document.getElementById("prevBtn").style.display = "none";
+            } else {
+              document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == x.length - 1) {
+              document.getElementById("nextBtn").innerHTML = "Submit";
+              document.getElementById("nextBtn").type = "submit";
+              document.getElementById("nextBtn").className += "continue_submit";
+            
+            } else {
+              document.getElementById("nextBtn").innerHTML = "Continue";
+            }
+            fixStepIndicator(n);
+          }
+
+function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form...
+            if (currentTab >= x.length) {
+              // ... the form ge          ts submitted:
+           //  document.getElementById("regForm").submit();
+             currentTab=0;
+            showTab(0);
+            
+              return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+          }
+
+          function validateForm() {
+            var x,
+              y,
+              i,
+              valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByClassName("req");
+
+            if (currentTab == 0) {
+              const products = document.querySelectorAll(
+                'input[name="product"]'
+              );
+              let product_radio_validation = false;
+              for (const product of products) {
+                if (product.checked) {
+                  product_radio_validation = true;
+                }
+              }
+              if (product_radio_validation == false) {
+                valid = false;
+                alert("Please choose your product!");
+              }
+            }
+
+            if (currentTab == 1) {
+              const brands = document.querySelectorAll('input[name="clientId"]');
+              let brand_radio_validation = false;
+              for (const brand of brands) {
+                if (brand.checked) {
+                  brand_radio_validation = true;
+                }
+              }
+              if (brand_radio_validation == false) {
+                valid = false;
+                alert("Please choose your brand!");
+              }
+            }
+
+            if (currentTab == 4) {
+              const time = document.querySelector('input[name="time_reserve"]');
+              let time_radio_validation = false;
+              if (time && !time.value) {
+                     time_radio_validation = false;
+                     alert("Please choose your time!");
+                       }
+             
+            }
+            if (currentTab == 5) {
+              const types_phone = document.querySelectorAll(
+                'input[name="numberType"]'
+              );
+              let type_phone_radio_validation = false;
+              for (const type_phone of types_phone) {
+                if (type_phone.checked) {
+                  type_phone_radio_validation = true;
+                }
+              }
+              if (type_phone_radio_validation == false) {
+                valid = false;
+                alert("Please choose type of your Phone Number.");
+              }
+            }
+
+            for (i = 0; i < y.length; i++) {
+              // If a field is empty...
+              if (y[i].value == "") {
+                // add an "invalid" class to the field:
+                y[i].className += " invalid";
+                // and set the current valid status to false
+                valid = false;
+              }
+            }
+            // If the valid status is true, mark the step as finished and valid:
+            if (valid) {
+              document.getElementsByClassName("step")[currentTab].className +=
+                " finish";
+            }
+            return valid; // return the valid status
+          }
+
+          function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i,
+              x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+              x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class on the current step:
+            x[n].className += " active";
+          }
+        </script>
+      </div>
+      <!-- .container-->
+    </div>
+
+    <!-- ######################################## Footer #######################################-->
+    <section id="footer">
+      <div
+        class="title-text"
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-delay="800"
+      >
+        <p>CONTACT</p>
+        <h1>Visit Shop Today</h1>
+      </div>
+      <div class="footer-row">
+        <div class="footer-left">
+          <h1>Opening Hours</h1>
+          <p><i class="fa fa-clock-o"></i> Monday to Friday - 9am to 9pm</p>
+          <p><i class="fa fa-clock-o"></i> Saturday to Sunday - 8am to 11pm</p>
+        </div>
+        <div class="footer-right">
+          <h1>Get In Touch</h1>
+          <p>
+            2512 Connie Drive, Unit 15 Sacramento, CA 95815<i
+              class="fa fa-map-marker"
+            ></i>
+          </p>
+          <p>tech@city-appliance.com <i class="fa fa-paper-plane"></i></p>
+          <p>+1 91-370-9630 <i class="fa fa-phone"></i></p>
+        </div>
+      </div>
+      <div class="social-links">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-youtube-play"></i>
+        <a target="_blank" href="https://algos-consulting.com/"
+          ><p>Copyright with Algosoft</p></a
+        >
+      </div>
+    </section>
+
+
+    <script>
+
+function submitForm(e) {
+  e.preventDefault();
+  var basUrl="http://city-appliance.com:4200";
+    var formData = $('#regForm').serialize();
+
+    $.ajax({
+      url: basUrl+"/scheduleService",
+      method: 'POST',
+      data: formData
+    }).done(function(response) {
+      toastr.success(response.message);
+      document.getElementById("nextBtn").type = "button";
+      $('#regForm')[0].reset();
+      // showTab(0);
+      // currentTab=0;
+      // grecaptcha.enterprise.reset(widgetId);
+    })
+}
+
+// function submitForm(e) {
+//   e.preventDefault();
+
+//   grecaptcha.enterprise.execute(widgetId).then(function(token) {
+//     var formData = $('#regForm').serialize();
+
+//     $.ajax({
+//       url: "http://localhost:8081/scheduleService",
+//       method: 'POST',
+//       data: formData
+//     }).done(function(response) {
+//       toastr.success(response.message);
+//       $('#regForm')[0].reset();
+//       showTab(0);
+//       currentTab=0;
+//       grecaptcha.enterprise.reset(widgetId);
+//     }).fail(function(xhr, status, error) {
+//       toastr.error('Please complete the reCAPTCHA verification');
+//     });
+//   });
+// }
+
+      var menuBtn = document.getElementById("menuBtn");
+      var sidebar = document.getElementById("sidebar");
+      var menu = document.getElementById("menu");
+
+      sidebar.style.right = "-220px";
+
+      menuBtn.onclick = function () {
+        if (sidebar.style.right == "-220px") {
+          sidebar.style.right = "0";
+          menu.src = "./images/close.png";
+        } else {
+          sidebar.style.right = "-220px";
+          menu.src = "./images/menu.png";
+        }
+      };
+
+      //  typewritter
+      var app = document.getElementById("app");
+    
+      
+    </script>
+    <script>
+      $(document).ready(function () {
+        $('#times_reserve').Zebra_DatePicker({
+        direction: true,
+        format: 'm/d/Y H:i',
+        show_select_time: true,
+        disabled_dates: ['* * 6', '* * 7']
+    });
+$('.mobile-menu-open').click(function () {
+    $('.mobile-menu-frame').show();
+});
+$('.mobile-menu-close').click(function () {
+    $(this).parent().hide();
+});
+
+$('input[type="radio"]').click(function () {
+    if ($(this).attr('id') == 'mobile_phone_number') {
+        $('.show_with_js').show();
+    } else {
+        $('.show_with_js').hide();
+    }
+});
+
+$("#problem_dishwasher").on('change', function () {
+    if ($(this).val() == 'Other') {
+        $('#Other_dishwasher').append(`<div id="other_problem"><div class="top_title">Kindly describe the issue as much as you can.</div><textarea type="text" name="other_problem_dishwasher" class="req"></textarea></div>`);
+    } else {
+        $('#other_problem').remove();
+    }
+});
+$("#problem_dryer").on('change', function () {
+    if ($(this).val() == 'Other') {
+        $('#Other_dryer').append(`
+            <div id="other_problem"><div class="top_title">Kindly describe the issue as much as you can.</div><textarea type="text" name="other_problem_dryer" class="req"></textarea></div>`
+        );
+    } else {
+        $('#other_problem').remove();
+    }
+});
+$("#problem_freezer").on('change', function () {
+    if ($(this).val() == 'Other') {
+        $('#Other_freezer').append(`
+            <div id="other_problem"><div class="top_title">Kindly describe the issue as much as you can.</div><textarea type="text" name="other_problem_freezer" class="req"></textarea></div>`
+        );
+    } else {
+        $('#other_problem').remove();
+    }
+});
+$("#problem_microwave").on('change', function () {
+    if ($(this).val() == 'Other') {
+        $('#Other_microwave').append(`
+            <div id="other_problem"><div class="top_title">Kindly describe the issue as much as you can.</div><textarea type="text" name="other_problem_microwave" class="req"></textarea></div>`
+        );
+    } else {
+        $('#other_problem').remove();
+    }
+});
+$("#problem_range").on('change', function () {
+    if ($(this).val() == 'Other') {
+        $('#Other_range').append(`
+            <div id="other_problem"><div class="top_title">Kindly describe the issue as much as you can.</div><textarea type="text" name="other_problem_range" class="req"></textarea></div>`
+        );
+    } else {
+        $('#other_problem').remove();
+    }
+});
+$("#problem_walloven").on('change', function () {
+    if ($(this).val() == 'Other') {
+        $('#Other_walloven').append(`
+            <div id="other_problem"><div class="top_title">Kindly describe the issue as much as you can.</div><textarea type="text" name="other_problem_walloven" class="req"></textarea></div>`
+        );
+    } else {
+        $('#other_problem').remove();
+    }
+});
+$("#problem_refrigerator").on('change', function () {
+    if ($(this).val() == 'Other') {
+        $('#Other_refrigerator').append(`
+            <div id="other_problem"><div class="top_title">Kindly describe the issue as much as you can.</div><textarea type="text" name="other_problem_refrigerator" class="req"></textarea></div>`
+        );
+    } else {
+        $('#other_problem').remove();
+    }
+});
+$("#problem_Trash_Compactor").on('change', function () {
+    if ($(this).val() == 'Other') {
+        $('#Other_Trash_Compactor').append(`
+            <div id="other_problem"><div class="top_title">Kindly describe the issue as much as you can.</div><textarea type="text" name="other_problem_Trash_Compactor" class="req"></textarea></div>`
+        );
+    } else {
+        $('#other_problem').remove();
+    }
+});
+$("#problem_cooktop").on('change', function () {
+    if ($(this).val() == 'Other') {
+        $('#Other_cooktop').append(`
+            <div id="other_problem"><div class="top_title">Kindly describe the issue as much as you can.</div><textarea type="text" name="other_problem_cooktop" class="req"></textarea></div>`
+        );
+    } else {
+        $('#other_problem').remove();
+    }
+});
+$("#problem_washer").on('change', function () {
+    if ($(this).val() == 'Other') {
+        $('#Other_washer').append(`
+            <div id="other_problem"><div class="top_title">Kindly describe the issue as much as you can.</div><textarea type="text" name="other_problem_washer" class="req"></textarea></div>`
+        );
+    } else {
+        $('#other_problem').remove();
+    }
+});
+$("#problem_garbage_disposal").on('change', function () {
+    if ($(this).val() == 'Other') {
+        $('#Other_garbage_disposal').append(`
+            <div id="other_problem"><div class="top_title">Kindly describe the issue as much as you can.</div><textarea type="text" name="other_problem_garbage_disposal" class="req"></textarea></div>`
+        );
+    } else {
+        $('#other_problem').remove();
+    }
+});
+$("#problem_range_hood").on('change', function () {
+    if ($(this).val() == 'Other') {
+        $('#Other_range_hood').append(`
+            <div id="other_problem"><div class="top_title">Kindly describe the issue as much as you can.</div><textarea type="text" name="other_problem_range_hood" class="req"></textarea></div>`
+        );
+    } else {
+        $('#other_problem').remove();
+    }
+});
+
+$('.product_dishwasher').hide();
+$('.product_dryer').hide();
+$('.product_freezer').hide();
+$('.product_microwave').hide();
+$('.product_range').hide();
+$('.product_walloven').hide();
+$('.product_refrigerator').hide();
+$('.product_Trash_Compactor').hide();
+$('.product_cooktop').hide();
+$('.product_washer').hide();
+$('.product_garbage_disposal').hide();
+$('.product_range_hood').hide();
+$('.price1').hide();
+$('.price2').hide();
+
+$('input:radio[name="product"]').change(
+    function () {
+        if ($(this).is(':checked') && $(this).val() == 'Dishwasher') {
+            $('.product_dishwasher').show();
+            $('.product_dryer').hide();
+            $('.product_freezer').hide();
+            $('.product_microwave').hide();
+            $('.product_range').hide();
+            $('.product_walloven').hide();
+            $('.product_refrigerator').hide();
+            $('.product_Trash_Compactor').hide();
+            $('.product_cooktop').hide();
+            $('.product_washer').hide();
+            $('.product_garbage_disposal').hide();
+            $('.product_range_hood').hide();
+            $('.price1').show();
+            $('.price2').hide();
+        } else if ($(this).is(':checked') && $(this).val() == 'Dryer') {
+            $('.product_dishwasher').hide();
+            $('.product_dryer').show();
+            $('.product_freezer').hide();
+            $('.product_microwave').hide();
+            $('.product_range').hide();
+            $('.product_walloven').hide();
+            $('.product_refrigerator').hide();
+            $('.product_Trash_Compactor').hide();
+            $('.product_cooktop').hide();
+            $('.product_washer').hide();
+            $('.product_garbage_disposal').hide();
+            $('.product_range_hood').hide();
+            $('.price1').show();
+            $('.price2').hide();
+        } else if ($(this).is(':checked') && $(this).val() == 'Freezer') {
+            $('.product_dishwasher').hide();
+            $('.product_dryer').hide();
+            $('.product_freezer').show();
+            $('.product_microwave').hide();
+            $('.product_range').hide();
+            $('.product_walloven').hide();
+            $('.product_refrigerator').hide();
+            $('.product_Trash_Compactor').hide();
+            $('.product_cooktop').hide();
+            $('.product_washer').hide();
+            $('.product_garbage_disposal').hide();
+            $('.product_range_hood').hide();
+            $('.price1').show();
+            $('.price2').hide();
+        } else if ($(this).is(':checked') && $(this).val() == 'Microwave') {
+            $('.product_dishwasher').hide();
+            $('.product_dryer').hide();
+            $('.product_freezer').hide();
+            $('.product_microwave').show();
+            $('.product_range').hide();
+            $('.product_walloven').hide();
+            $('.product_refrigerator').hide();
+            $('.product_Trash_Compactor').hide();
+            $('.product_cooktop').hide();
+            $('.product_washer').hide();
+            $('.product_garbage_disposal').hide();
+            $('.product_range_hood').hide();
+            $('.price1').hide();
+            $('.price2').show();
+        } else if ($(this).is(':checked') && $(this).val() == 'Range') {
+            $('.product_dishwasher').hide();
+            $('.product_dryer').hide();
+            $('.product_freezer').hide();
+            $('.product_microwave').hide();
+            $('.product_range').show();
+            $('.product_walloven').hide();
+            $('.product_refrigerator').hide();
+            $('.product_Trash_Compactor').hide();
+            $('.product_cooktop').hide();
+            $('.product_washer').hide();
+            $('.product_garbage_disposal').hide();
+            $('.product_range_hood').hide();
+            $('.price1').show();
+            $('.price2').hide();
+        } else if ($(this).is(':checked') && $(this).val() == 'Wall Oven') {
+            $('.product_dishwasher').hide();
+            $('.product_dryer').hide();
+            $('.product_freezer').hide();
+            $('.product_microwave').hide();
+            $('.product_range').hide();
+            $('.product_walloven').show();
+            $('.product_refrigerator').hide();
+            $('.product_Trash_Compactor').hide();
+            $('.product_cooktop').hide();
+            $('.product_washer').hide();
+            $('.product_garbage_disposal').hide();
+            $('.product_range_hood').hide();
+            $('.price1').hide();
+            $('.price2').show();
+        } else if ($(this).is(':checked') && $(this).val() == 'Refrigerator') {
+            $('.product_dishwasher').hide();
+            $('.product_dryer').hide();
+            $('.product_freezer').hide();
+            $('.product_microwave').hide();
+            $('.product_range').hide();
+            $('.product_walloven').hide();
+            $('.product_refrigerator').show();
+            $('.product_Trash_Compactor').hide();
+            $('.product_cooktop').hide();
+            $('.product_washer').hide();
+            $('.product_garbage_disposal').hide();
+            $('.product_range_hood').hide();
+            $('.price1').show();
+            $('.price2').hide();
+        } else if ($(this).is(':checked') && $(this).val() == 'Trash Compactor') {
+            $('.product_dishwasher').hide();
+            $('.product_dryer').hide();
+            $('.product_freezer').hide();
+            $('.product_microwave').hide();
+            $('.product_range').hide();
+            $('.product_walloven').hide();
+            $('.product_refrigerator').hide();
+            $('.product_Trash_Compactor').show();
+            $('.product_cooktop').hide();
+            $('.product_washer').hide();
+            $('.product_garbage_disposal').hide();
+            $('.product_range_hood').hide();
+            $('.price1').show();
+            $('.price2').hide();
+        } else if ($(this).is(':checked') && $(this).val() == 'Cooktop') {
+            $('.product_dishwasher').hide();
+            $('.product_dryer').hide();
+            $('.product_freezer').hide();
+            $('.product_microwave').hide();
+            $('.product_range').hide();
+            $('.product_walloven').hide();
+            $('.product_refrigerator').hide();
+            $('.product_Trash_Compactor').hide();
+            $('.product_cooktop').show();
+            $('.product_washer').hide();
+            $('.product_garbage_disposal').hide();
+            $('.product_range_hood').hide();
+            $('.price1').show();
+            $('.price2').hide();
+        } else if ($(this).is(':checked') && $(this).val() == 'Washer') {
+            $('.product_dishwasher').hide();
+            $('.product_dryer').hide();
+            $('.product_freezer').hide();
+            $('.product_microwave').hide();
+            $('.product_range').hide();
+            $('.product_walloven').hide();
+            $('.product_refrigerator').hide();
+            $('.product_Trash_Compactor').hide();
+            $('.product_cooktop').hide();
+            $('.product_washer').show();
+            $('.product_garbage_disposal').hide();
+            $('.product_range_hood').hide();
+            $('.price1').show();
+            $('.price2').hide();
+        } else if ($(this).is(':checked') && $(this).val() == 'Garbage Disposal') {
+            $('.product_dishwasher').hide();
+            $('.product_dryer').hide();
+            $('.product_freezer').hide();
+            $('.product_microwave').hide();
+            $('.product_range').hide();
+            $('.product_walloven').hide();
+            $('.product_refrigerator').hide();
+            $('.product_Trash_Compactor').hide();
+            $('.product_cooktop').hide();
+            $('.product_washer').hide();
+            $('.product_garbage_disposal').show();
+            $('.product_range_hood').hide();
+            $('.price1').show();
+            $('.price2').hide();
+        } else if ($(this).is(':checked') && $(this).val() == 'Range Hood') {
+            $('.product_dishwasher').hide();
+            $('.product_dryer').hide();
+            $('.product_freezer').hide();
+            $('.product_microwave').hide();
+            $('.product_range').hide();
+            $('.product_walloven').hide();
+            $('.product_refrigerator').hide();
+            $('.product_Trash_Compactor').hide();
+            $('.product_cooktop').hide();
+            $('.product_washer').hide();
+            $('.product_garbage_disposal').hide();
+            $('.product_range_hood').show();
+            $('.price1').show();
+            $('.price2').hide();
+        }
+    }
+);
+
+});
+    </script>
+  </body>
+</html>
