@@ -12,7 +12,7 @@ const secret = "mysecretkey";
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://127.0.0.1:5173"],
+    origin: ["https://api.city-appliance.com", "http://45.132.241.52:8800"],
   })
 );
 
