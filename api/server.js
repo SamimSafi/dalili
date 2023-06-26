@@ -54,9 +54,9 @@ var mysqlConnection = mysql.createConnection({
   host: "localhost",
   // user: "elaminte_elaminte_content",
   // password: "h-&].emHSeQU",
-  user: "root",
-  password: "",
-  database: "fairfixappliance",
+  user: "dalili",
+  password: "tF1QhroBCczD",
+  database: "dalili_fairfixappliance",
 });
 
 // ================= User Register ==========================
