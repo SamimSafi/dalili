@@ -26,7 +26,7 @@ export const FeatureImageList = () => {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
 
-  const deleteFeature = (id) => {
+  const deleteFeature = (id:any) => {
     axios
       .delete(baseUrl + '/featureImage/' + id)
       .then((res) => {

@@ -25,7 +25,7 @@ export const AboutUsList = () => {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
 
-  const deleteAboutUs = (id) => {
+  const deleteAboutUs = (id:any) => {
     axios
       .delete(baseUrl + '/aboutUs/' + id)
       .then((res) => {

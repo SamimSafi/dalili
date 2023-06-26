@@ -29,7 +29,7 @@ export const HeroList = () => {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
 
-  const deleteHero = (id) => {
+  const deleteHero = (id:any) => {
     axios
       .delete(baseUrl + '/hero/' + id)
       .then((res) => {

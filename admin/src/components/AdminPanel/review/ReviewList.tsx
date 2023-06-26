@@ -31,7 +31,7 @@ export const ReviewList = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [iconToDelete, setIconToDelete] = useState();
 
-  const deleteReview = (id) => {
+  const deleteReview = (id:any) => {
     axios
       .delete(baseUrl + '/review/' + id)
       .then((res) => {
@@ -54,7 +54,7 @@ export const ReviewList = () => {
     loadReview();
   }, []);
 
-  const handleDeleteIcon = (icon) => {
+  const handleDeleteIcon = (icon:any) => {
     setIconToDelete(icon);
     setShowDeleteModal(true);
   };

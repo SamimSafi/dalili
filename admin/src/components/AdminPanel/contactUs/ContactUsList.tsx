@@ -23,7 +23,7 @@ export const ContactUsList = () => {
     const [showToast, setShowToast] = useState(false);
     const [toastMessage, setToastMessage] = useState('');
 
-    const deleteSocial = (id) => {
+    const deleteSocial = (id:any) => {
         axios
           .delete(baseUrl + '/contactUs/' + id)
           .then((res) => {

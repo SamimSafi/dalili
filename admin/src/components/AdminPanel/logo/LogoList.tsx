@@ -27,7 +27,7 @@ export const LogoList = () => {
   const [toastMessage, setToastMessage] = useState('');
   const [logo, setLogo] = useState({ id: 0, image: '' });
 
-  const deleteLogo = (id) => {
+  const deleteLogo = (id:any) => {
     axios
       .delete(baseUrl + '/logo/' + id)
       .then((res) => {

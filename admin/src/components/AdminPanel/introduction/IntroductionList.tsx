@@ -27,7 +27,7 @@ export const IntroductionList = () => {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
 
-  const deleteIntroduction = (id) => {
+  const deleteIntroduction = (id:any) => {
     axios
       .delete(baseUrl + '/introduction/' + id)
       .then((res) => {

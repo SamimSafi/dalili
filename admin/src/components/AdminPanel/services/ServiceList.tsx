@@ -47,7 +47,7 @@ export const ServiceList = () => {
       });
   };
 
-  const deleteServices = (id) => {
+  const deleteServices = (id:any) => {
     axios
       .delete(baseUrl + '/services/' + id)
       .then((res) => {
@@ -70,7 +70,7 @@ export const ServiceList = () => {
     loadServices();
   }, []);
 
-  const handleDeleteIcon = (icon) => {
+  const handleDeleteIcon = (icon:any) => {
     setIconToDelete(icon);
     setShowDeleteModal(true);
   };

@@ -28,7 +28,7 @@ export const ClientList = () => {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
 
-  const deleteClients = (id) => {
+  const deleteClients = (id:any) => {
     axios
       .delete(baseUrl + '/clients/' + id)
       .then((res) => {

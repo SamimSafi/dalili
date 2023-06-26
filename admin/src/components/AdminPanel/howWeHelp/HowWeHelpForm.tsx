@@ -35,7 +35,7 @@ export const HowWeHelpForm = ({
     setDescription(event.target.value);
   };
 
-  const handleFileChange = (event) => {
+  const handleFileChange = (event:any) => {
     setFile(event.target.files[0]);
   };
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

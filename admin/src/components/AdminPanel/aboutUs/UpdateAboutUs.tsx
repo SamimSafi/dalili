@@ -11,7 +11,7 @@ function UpdateAboutUs() {
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
 
-  const handleContentChange = (event) => {
+  const handleContentChange = (event:any) => {
     setContent(event.target.value);
   };
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ function UpdateAboutUs() {
   //   setDescription(event.target.value);
   // };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:any) => {
     event.preventDefault();
     setLoading(true);
 

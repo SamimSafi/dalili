@@ -30,7 +30,7 @@ export const UserList = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [iconToDelete, setIconToDelete] = useState();
 
-  const deleteUser = (id) => {
+  const deleteUser = (id:any) => {
     axios
       .delete(baseUrl + '/users/' + id)
       .then((res) => {
@@ -53,7 +53,7 @@ export const UserList = () => {
     loadUser();
   }, []);
 
-  const handleDeleteIcon = (icon) => {
+  const handleDeleteIcon = (icon:any) => {
     setIconToDelete(icon);
     setShowDeleteModal(true);
   };

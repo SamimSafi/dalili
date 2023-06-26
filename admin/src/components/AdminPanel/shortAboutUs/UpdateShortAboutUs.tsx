@@ -38,11 +38,11 @@ function UpdateShortAboutUs() {
     setDescription(event.target.value);
   };
 
-  const handleFileChange = (event) => {
+  const handleFileChange = (event:any) => {
     setFile(event.target.files[0]);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:any) => {
     event.preventDefault();
     setLoading(true);
 

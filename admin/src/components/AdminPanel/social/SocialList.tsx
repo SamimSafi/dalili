@@ -30,7 +30,7 @@ export const SocialList = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [iconToDelete, setIconToDelete] = useState();
 
-  const deleteSocial = (id) => {
+  const deleteSocial = (id:any) => {
     axios
       .delete(baseUrl + '/socialIcon/' + id)
       .then((res) => {
@@ -53,7 +53,7 @@ export const SocialList = () => {
     loadSocial();
   }, []);
 
-  const handleDeleteIcon = (icon) => {
+  const handleDeleteIcon = (icon:any) => {
     setIconToDelete(icon);
     setShowDeleteModal(true);
   };

@@ -12,7 +12,7 @@ function UpdateFeatureImage() {
   const [file, setFile] = useState<File | null>();
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
-  const handleServiceChange = (event) => {
+  const handleServiceChange = (event:any) => {
     setName(event.target.value);
   };
   const navigate = useNavigate();
@@ -28,11 +28,11 @@ function UpdateFeatureImage() {
       });
   }, [id]);
 
-  const handleFileChange = (event) => {
+  const handleFileChange = (event:any) => {
     setFile(event.target.files[0]);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:any) => {
     event.preventDefault();
     setLoading(true);
 

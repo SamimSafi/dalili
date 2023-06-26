@@ -42,7 +42,7 @@ function UpdateOurContact() {
       });
   }, [id]);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:any) => {
     event.preventDefault();
     setLoading(true);
 

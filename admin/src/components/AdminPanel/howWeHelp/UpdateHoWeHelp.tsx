@@ -7,8 +7,6 @@ import { Badge, Card, Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import { IconPicker } from 'react-fa-icon-picker';
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 function UpdateHoWeHelp() {
   const [file, setFile] = useState<File | null>();
@@ -44,7 +42,7 @@ function UpdateHoWeHelp() {
   const handleIconChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIcon(event.target.value);
   };
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:any) => {
     event.preventDefault();
     setLoading(true);
 

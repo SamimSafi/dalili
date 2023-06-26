@@ -28,7 +28,7 @@ export const HowWeHelpList = () => {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
 
-  const deleteHowWeHelp = (id) => {
+  const deleteHowWeHelp = (id:any) => {
     axios
       .delete(baseUrl + '/howWeHelp/' + id)
       .then((res) => {

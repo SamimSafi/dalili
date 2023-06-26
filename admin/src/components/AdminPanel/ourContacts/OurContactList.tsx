@@ -30,7 +30,7 @@ export const OurContactList = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [iconToDelete, setIconToDelete] = useState();
 
-  const deleteOurContact = (id) => {
+  const deleteOurContact = (id:any) => {
     axios
       .delete(baseUrl + '/ourContact/' + id)
       .then((res) => {
@@ -53,7 +53,7 @@ export const OurContactList = () => {
     loadOurContact();
   }, []);
 
-  const handleDeleteIcon = (icon) => {
+  const handleDeleteIcon = (icon:any) => {
     setIconToDelete(icon);
     setShowDeleteModal(true);
   };

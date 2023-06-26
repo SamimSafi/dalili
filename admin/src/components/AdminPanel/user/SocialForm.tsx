@@ -81,7 +81,7 @@ export const SocialForm = ({loadSocial,setShow,setToastMessage,setShowToast}:Ser
           value={icon}
           placeholder="Select Icon"
         />
-        <IconPicker value={icon} onChange={(icon)=>{setIcon(icon)}} />
+        <IconPicker value={icon} onChange={(icon:any)=>{setIcon(icon)}} />
       </Form.Group>
 
       <Button variant="primary" className='mt-4' type="submit">

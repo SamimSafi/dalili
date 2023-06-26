@@ -14,7 +14,7 @@ function UpdateSocial() {
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
   const [icon, setIcon] = useState("");
-  const handleNameChange = (event) => {
+  const handleNameChange = (event:any) => {
     setName(event.target.value);
   };
   const navigate = useNavigate();
@@ -36,11 +36,11 @@ function UpdateSocial() {
   //   setDescription(event.target.value);
   // };
 
-  const handleUrlChange = (event) => {
+  const handleUrlChange = (event:any) => {
     setLink(event.target.value);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:any) => {
     event.preventDefault();
     setLoading(true);
 
@@ -120,7 +120,7 @@ function UpdateSocial() {
                 width: '100%',
               }}
             />
-            <IconPicker value={icon} onChange={(v) => setIcon(v)} />
+            <IconPicker value={icon} onChange={(v:any) => setIcon(v)} />
         </div>
         <button
           type="submit"

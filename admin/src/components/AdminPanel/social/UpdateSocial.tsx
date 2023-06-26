@@ -14,7 +14,7 @@ function UpdateSocial() {
   const [file, setFile] = useState< File | null>();
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
-  const handleNameChange = (event) => {
+  const handleNameChange = (event:any) => {
     setName(event.target.value);
   };
   const navigate = useNavigate();
@@ -35,14 +35,14 @@ function UpdateSocial() {
   //   setDescription(event.target.value);
   // };
 
-  const handleUrlChange = (event) => {
+  const handleUrlChange = (event:any) => {
     setUrl(event.target.value);
   };
-  const handleFileChange = (event) => {
+  const handleFileChange = (event:any) => {
     setFile(event.target.files[0]);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:any) => {
     event.preventDefault();
     setLoading(true);
 

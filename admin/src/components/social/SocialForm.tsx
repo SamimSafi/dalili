@@ -78,7 +78,7 @@ export const SocialForm = ({
           <Form.Control type="text" name="icon" value={icon} placeholder="Select Icon" />
           <IconPicker
             value={icon}
-            onChange={(icon) => {
+            onChange={(icon:any) => {
               setIcon(icon);
             }}
           />

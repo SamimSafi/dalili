@@ -57,7 +57,6 @@ export default function Login({ setIsLoggedIn }: LoginProps) {
       navigate('/');
     } catch (err) {
       console.error(err);
-      console.log(err.response); // log the error response object
       setErrorMessage('Invalid email or password');
     }
   };

@@ -26,7 +26,7 @@ export const GoogleMapList = () => {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
 
-  const deleteGoogleMap = (id) => {
+  const deleteGoogleMap = (id:any) => {
     axios
       .delete(baseUrl + '/googleMap/' + id)
       .then((res) => {

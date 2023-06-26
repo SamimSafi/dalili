@@ -30,7 +30,7 @@ export const ShortAboutUsList = () => {
   const [toastMessage, setToastMessage] = useState('');
   const [iconToDelete, setIconToDelete] = useState();
 
-  const deleteShortAboutUs = (id) => {
+  const deleteShortAboutUs = (id:any) => {
     axios
       .delete(baseUrl + '/shortAboutUs/' + id)
       .then((res) => {
@@ -53,7 +53,7 @@ export const ShortAboutUsList = () => {
     loadShortAboutUs();
   }, []);
 
-  const handleDeleteIcon = (icon) => {
+  const handleDeleteIcon = (icon:any) => {
     setIconToDelete(icon);
     setShowDeleteModal(true);
   };
