@@ -51,12 +51,12 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 var mysqlConnection = mysql.createConnection({
-  host: "localhost",
+  host: "153.92.6.122",
   // user: "elaminte_elaminte_content",
   // password: "h-&].emHSeQU",
-  user: "dalili",
-  password: "tF1QhroBCczD",
-  database: "dalili_fairfixappliance",
+  user: "u155750040_dalili",
+  password: "UsKNNgPi2$",
+  database: "u155750040_cityapplicance",
 });
 
 // ================= User Register ==========================
